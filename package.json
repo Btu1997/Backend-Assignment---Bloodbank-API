@@ -1,0 +1,28 @@
+{
+  "name": "backend-assignment---bloodbank-api",
+  "version": "1.0.0",
+  "description": "Develop a NestJS / ExpressJS REST API server with the following requirements:\r The app should handle 2 types of users - Hospital, Receiver\r Hospital and Receiver should be able to create an account and sign in\r The hospital should be able to add all the blood samples info available\r Receivers are able to request blood samples from hospitals. Make sure that only those receivers who are eligible for the blood sample are allowed to request samples.\r The hospital should be able to see the list of all receivers who have requested a particular blood group from its blood bank.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Btu1997/Backend-Assignment---Bloodbank-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Btu1997/Backend-Assignment---Bloodbank-API/issues"
+  },
+  "homepage": "https://github.com/Btu1997/Backend-Assignment---Bloodbank-API#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.2.0",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
