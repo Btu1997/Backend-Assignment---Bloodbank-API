@@ -14,15 +14,15 @@ The hospital should be able to see the list of all receivers who have requested 
 Endpoints:
 
 
-GET endpoint to get the list of all blood samples available in all hospitals (Public - Everyone can access)
+<!-- GET endpoint to get the list of all blood samples available in all hospitals (Public - Everyone can access) -->
 
 <!-- //POST endpoint to add the blood sample info (Only accessible to respective hospital) -->
 
 <!-- PUT endpoint to update the respective blood info (Only accessible to respective hospital) -->
 
-DELETE endpoint to delete the respective blood info (Only accessible to respective hospital)
+<!-- DELETE endpoint to delete the respective blood info (Only accessible to respective hospital) -->
 
-GET endpoint to get all the blood info that the hospital uploaded (Only accessible to respective hospital)
+<!-- GET endpoint to get all the blood info that the hospital uploaded (Only accessible to respective hospital) -->
 
 <!-- POST Endpoint to request a blood sample (Only accessible to receiver) -->
 

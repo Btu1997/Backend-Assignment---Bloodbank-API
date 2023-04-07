@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 
 const jwt = require('jsonwebtoken')
 const { isValid, isValidName, isvalidEmail, isvalidMobile, isValidPassword,  keyValid, validString } = require('../Validator/validation');
-const { isValidObjectId } = require("mongoose");
+
 
 const createReceiver = async function (req, res) {
     try {

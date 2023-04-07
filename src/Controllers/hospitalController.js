@@ -21,6 +21,9 @@ const createHospital = async function (req, res) {
         if (!isvalidEmail.test(email)) return res.status(400).send({ status: false, message: "email should be in  valid Formate" })
 
         if (await hospitalModel.findOne({ email })) return res.status(400).send({ status: false, message: "This email is already Registered Please give another Email" })
+        if (!isValid(password)) return res.status(400).send({ status: false, message: "Password is mandatory and should have non empty String" })
+
+        if (!isValidPassword(password)) return res.status(400).send({ status: false, message: "please provide Valid password with 1st letter should be Capital letter and contains spcial character with Min length 8 and Max length 15" })
 
         if (!isValid(phone)) return res.status(400).send({ status: false, message: "Phone is mandatory and should have non empty Number" })
 
@@ -28,10 +31,7 @@ const createHospital = async function (req, res) {
 
         if (await hospitalModel.findOne({ phone })) return res.status(400).send({ status: false, message: "This Phone is already Registered Please give another Phone" })
 
-        if (!isValid(password)) return res.status(400).send({ status: false, message: "Password is mandatory and should have non empty String" })
-
-        if (!isValidPassword(password)) return res.status(400).send({ status: false, message: "please provide Valid password with 1st letter should be Capital letter and contains spcial character with Min length 8 and Max length 15" })
-
+        
         if (!isValid(address)) return res.status(400).send({ status: false, message: "Address is mandatory" })
 
         const encyptPassword = await bcrypt.hash(password, 10);
