@@ -90,7 +90,8 @@ const  getBloodSampleDetails = async function(req, res) {
   try {
     const hospital_id = req.params.hospital_id;
 
-    // Use the BloodInfo model to find all blood info uploaded by the hospital
+   if(!hospital_id) return res.status(400).send({ status: false, message: "hospital_id is required in params " })
+
     let data = await bloodSampleModel.find({hospital_id:hospital_id})
      //console.log(bloodSample)
         if (data.length == 0) {
